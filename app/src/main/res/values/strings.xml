@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Book</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="carti">Carti</string>
+    <string name="citate">Citate</string>
+    <string name="data">Data</string>
+    <string name="aminteste">Aminteste-mi</string>
+    <string name="ora">Ora</string>
+    <string name="textview">TextView</string>
+</resources>
