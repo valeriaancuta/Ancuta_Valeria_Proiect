@@ -33,13 +33,15 @@ public class BooksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_books, container, false);
+        // obiect retrofit configurat cu un URL de baza
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://openlibrary.org/subjects/")
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create()) // face maparea dintre JSON si modelul din Java
                 .build();
 
         Api api = retrofit.create(Api.class);
         Call<BookResponse> call = api.getBooks();
+        // call pe api pe un thread separat pentru a nu bloca UI
         call.enqueue(new Callback<BookResponse>() {
             @Override
             public void onResponse(Call<BookResponse> call, final Response<BookResponse> response) {

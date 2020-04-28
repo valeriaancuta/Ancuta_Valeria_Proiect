@@ -32,7 +32,7 @@ public class QuoteFragment extends Fragment {
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_quote, container, false);
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://philosophy-quotes-api.glitch.me/")
+                .baseUrl("https://philosophy-quotes-api.glitch.me/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -14,9 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+       // creez primul fragment
         Fragment fragment = new MainFragment();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
+        // replace fragmentului creat in container
         transaction.replace(R.id.contentFragment, fragment);
         transaction.commit();
 
